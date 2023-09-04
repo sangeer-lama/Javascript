@@ -8,7 +8,6 @@ function parseQueryParameters(url) {
 
   return queryParams;
 }
-
-const url = "https://example.com/path?param1=value1&param2=value2";
+const url = "https://example.com/path?param1=first1&param2=second2";
 const queryParams = parseQueryParameters(url);
 console.log(queryParams);
