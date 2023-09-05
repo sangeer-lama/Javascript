@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.form{
+    width: clamp(320px, 30%, 430px);
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+}
+
+input{
+    display: block;
+}
+
+.width-50{
+    width: 50%;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+
+
+.continue-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0 0 0 2px #fff,0 0 0 3px #007bff;
+}

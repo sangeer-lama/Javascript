@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form action="#" class="form">
+      <div class="form-step form-step-active">
+        <label>
+          <input type="radio" name="product" value="AlgoExpert" /> AlgoExpert
+        </label>
+        <label>
+          <input type="radio" name="product" value="SystemsExpert" />
+          SystemsExpert
+        </label>
+        <label>
+          <input type="radio" name="product" value="ML Expert" /> ML Expert
+        </label>
+        <label>
+          <input type="radio" name="product" value="FrontendExpert" />
+          FrontendExpert
+        </label>
+        <button class="continue-button width-50 ml-auto" onclick="nextStep('step1', 'step2')">
+          Continue
+        </button>
+      </div> 
+    </form>
+  </body>
+</html>

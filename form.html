@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styles for the stepper container */
+        .stepper-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Styles for each step */
+        .step {
+            display: none;
+            padding: 20px 0;
+        }
+
+        /* Style for the active step */
+        .active-step {
+            display: block;
+        }
+
+        /* Styles for step headers */
+        .step-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the "Continue" button */
+        .continue-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .continue-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="stepper-container">
+        <div class="step active-step" id="step1">
+            <div class="step-header">Step 1: Product Selection</div>
+            <!-- Add your product selection form fields here -->
+            <label>
+                <input type="radio" name="product" value="AlgoExpert"> AlgoExpert
+            </label>
+            <label>
+                <input type="radio" name="product" value="SystemsExpert"> SystemsExpert
+            </label>
+            <label>
+                <input type="radio" name="product" value="ML Expert"> ML Expert
+            </label>
+            <label>
+                <input type="radio" name="product" value="FrontendExpert"> FrontendExpert
+            </label>
+            <button class="continue-button" onclick="nextStep('step1', 'step2')">Continue</button>
+        </div>
+        <div class="step" id="step2">
+            <div class="step-header">Step 2: Payment Method</div>
+            <!-- Add your payment method selection form fields here -->
+            <button class="continue-button" onclick="nextStep('step2', 'step3')">Continue</button>
+        </div>
+        <div class="step" id="step3">
+            <div class="step-header">Step 3: Payment Form</div>
+            <!-- Add your payment form fields here -->
+            <button class="continue-button" onclick="nextStep('step3', 'step4')">Continue</button>
+        </div>
+        <div class="step" id="step4">
+            <div class="step-header">Step 4: Purchase Success</div>
+            <!-- Purchase success message or additional information -->
+        </div>
+    </div>
+
+    <script>
+        function nextStep(currentStepId, nextStepId) {
+            const currentStep = document.getElementById(currentStepId);
+            const nextStep = document.getElementById(nextStepId);
+            currentStep.style.display = 'none';
+            nextStep.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
